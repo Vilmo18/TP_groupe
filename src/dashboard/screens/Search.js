@@ -110,7 +110,9 @@ const Search = ({ navigation }) => {
         >
           {/* copying vertical flatlist from dashboard */}
           <FlatList
-            keyExtractor={(item) => item.question}
+            kkeyExtractor={(item, index) => {
+              index.toString();
+            }}
             data={filtre}
             renderItem={({ item }) => (
               <View
@@ -158,34 +160,6 @@ const Search = ({ navigation }) => {
                     >
                       {item.answer}
                     </Text>
-                  </View>
-                </View>
-
-                {/* Coin price and indicator */}
-                <View
-                  style={{
-                    flexDirection: 'column',
-                    backgroundColor: '#fff',
-                    alignContent: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {/* indicator */}
-                  <View
-                    style={{
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <Icon
-                      name={
-                        item.type == 'I'
-                          ? 'chevron-circle-up'
-                          : 'chevron-circle-down'
-                      }
-                      color={item.type == 'I' ? 'green' : 'red'}
-                    />
                   </View>
                 </View>
               </View>

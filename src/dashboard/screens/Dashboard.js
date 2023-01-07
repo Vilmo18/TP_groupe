@@ -17,24 +17,9 @@ import {
 } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { dummyData, indicateur, search } from '../constants';
-import { ProfitIndicator, ActionCenter } from '../components';
-import { useEffect } from 'react';
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
 
 const Dashboard = () => {
   const data = indicateur;
-  const [fontsLoaded] = useFonts({
-    LemonLove: require('./assets/fonts/Roboto-Regular.ttf'),
-    MilkyCoffee: require('./assets/fonts/Roboto-Bold.ttf'),
-  });
-
-  useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync();
-    }
-    prepare();
-  }, []);
   return (
     <View style={{ flex: 1 }}>
       {/* Statusbar */}
