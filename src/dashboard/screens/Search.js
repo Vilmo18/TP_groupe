@@ -54,7 +54,7 @@ const Search = ({ navigation }) => {
           }}
         >
           {/* backbutton */}
-          <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
             <Icon name="arrow-left" size={23} color="#333" />
           </TouchableOpacity>
 

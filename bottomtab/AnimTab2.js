@@ -8,6 +8,7 @@ import * as Animatable from 'react-native-animatable';
 import Formulaire from '../fomulaire/Formulaire';
 import { Dashboard, Search } from '../src/dashboard/screens';
 import Prediction from '../src/dashboard/screens/Prediction';
+import CameraView from '../src/dashboard/camera/CameraView';
 
 const TabArr = [
   {
@@ -18,11 +19,11 @@ const TabArr = [
     component: Dashboard,
   },
   {
-    route: 'Dashboard',
-    label: 'Dashboard',
+    route: 'Camera',
+    label: 'Recognition',
     type: Icons.Feather,
     icon: 'camera',
-    component: Dashboard,
+    component: CameraView,
   },
   {
     route: 'Search',
@@ -40,8 +41,8 @@ const TabArr = [
     component: Prediction,
   },
   {
-    route: 'Settings',
-    label: 'Setting',
+    route: 'Account',
+    label: 'Account',
     type: Icons.FontAwesome,
     icon: 'user-circle-o',
     component: Formulaire,
